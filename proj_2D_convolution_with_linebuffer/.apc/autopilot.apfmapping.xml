@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="convolution.cpp" path="/home/hacker/Project/final_project/convolution.cpp"/>
+    <originFiles name="convolution.h" path="/home/hacker/Project/final_project/convolution.h"/>
+  </source>
+  <testbench>
+    <originFiles name="convolution_test.cpp" path="/home/hacker/Project/final_project/convolution_test.cpp"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>

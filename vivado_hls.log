@@ -1,0 +1,68 @@
+INFO: [HLS 200-10] Running '/home/hacker/Vivado/2018.1/bin/unwrapped/lnx64.o/vivado_hls'
+INFO: [HLS 200-10] For user 'hacker' on host 'hacker-ThinkPad-T460s' (Linux_x86_64 version 5.15.0-126-generic) on Mon Dec 16 23:21:31 +07 2024
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/hacker/2D_convolution_with_linebuffer'
+INFO: [HLS 200-10] Opening project '/home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer'.
+INFO: [HLS 200-10] Opening solution '/home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer/solution1'.
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
+INFO: [HLS 200-10] Setting target device to 'xc7z020clg484-1'
+INFO: [COSIM 212-47] Using XSIM for RTL simulation.
+INFO: [COSIM 212-14] Instrumenting C test bench ...
+   Build using ""
+   Compiling apatb_filter11x11_strm.cpp
+   Compiling convolution_test.cpp_pre.cpp.tb.cpp
+   Compiling convolution.cpp_pre.cpp.tb.cpp
+   Generating cosim.tv.exe
+which: /home/hacker/Vivado/2018.1/lnx64/tools/clang-3.9/bin/clang++: u k ow  comma d
+In file included from apatb_filter11x11_strm.cpp:18:
+/home/hacker/Vivado/2018.1/include/ap_stream.h:70:2: warning: AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead. [-W#warnings]
+#warning AP_STREAM macros are deprecated. Please use hls::stream<> from "hls_stream.h" instead.
+ ^
+apatb_filter11x11_strm.cpp:271:15: warning: reference cannot be bound to dereferenced null pointer in well-defined C++ code; comparison may be assumed to always evaluate to true [-Wtautological-undefined-compare]
+                                                                if (&(aesl_tmp_3[0]) != NULL) // check the null address if the c port is array or others
+                                                                     ~^~~~~~~~~~~~~~    ~~~~
+/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:1043:7: note: 'operator[]' returns a reference
+      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      ^
+apatb_filter11x11_strm.cpp:294:15: warning: reference cannot be bound to dereferenced null pointer in well-defined C++ code; comparison may be assumed to always evaluate to true [-Wtautological-undefined-compare]
+                                                                if (&(aesl_tmp_3[0]) != NULL) // check the null address if the c port is array or others
+                                                                     ~^~~~~~~~~~~~~~    ~~~~
+/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:1043:7: note: 'operator[]' returns a reference
+      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      ^
+apatb_filter11x11_strm.cpp:507:13: warning: reference cannot be bound to dereferenced null pointer in well-defined C++ code; comparison may be assumed to always evaluate to true [-Wtautological-undefined-compare]
+                                                if (&(aesl_tmp_0[0]) != NULL) // check the null address if the c port is array or others
+                                                     ~^~~~~~~~~~~~~~    ~~~~
+/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:1043:7: note: 'operator[]' returns a reference
+      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      ^
+apatb_filter11x11_strm.cpp:576:13: warning: reference cannot be bound to dereferenced null pointer in well-defined C++ code; comparison may be assumed to always evaluate to true [-Wtautological-undefined-compare]
+                                                if (&(aesl_tmp_3[0]) != NULL) // check the null address if the c port is array or others
+                                                     ~^~~~~~~~~~~~~~    ~~~~
+/usr/lib/gcc/x86_64-linux-gnu/10/../../../../include/c++/10/bits/stl_vector.h:1043:7: note: 'operator[]' returns a reference
+      operator[](size_type __n) _GLIBCXX_NOEXCEPT
+      ^
+5 warnings generated.
+/usr/bin/ld: obj/apatb_filter11x11_strm.o: in function `AESL_WRAP_filter11x11_strm(int, int, hls::stream<unsigned int>&, hls::stream<unsigned int>&)':
+/home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer/solution1/sim/wrapc/apatb_filter11x11_strm.cpp:528: undefined reference to `sc_dt::sc_int_base::to_string[abi:cxx11](sc_dt::sc_numrep) const'
+/usr/bin/ld: /home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer/solution1/sim/wrapc/apatb_filter11x11_strm.cpp:534: undefined reference to `sc_dt::sc_int_base::to_string[abi:cxx11](sc_dt::sc_numrep) const'
+/usr/bin/ld: obj/apatb_filter11x11_strm.o: in function `sc_dt::sc_proxy<sc_dt::sc_bv_base>::to_string[abi:cxx11](sc_dt::sc_numrep) const':
+/home/hacker/Vivado/2018.1/lnx64/tools/systemc/include/sysc/datatypes/bit/sc_proxy.h:1335: undefined reference to `sc_dt::convert_to_fmt(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, sc_dt::sc_numrep, bool)'
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make: *** [Makefile.rules:375: cosim.tv.exe] Error 1
+ERROR: [COSIM 212-317] C++ compile error.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-321] EXE file generate failed.
+ERROR: [COSIM 212-331] Aborting co-simulation: C simulation failed, compilation errors.
+ERROR: [COSIM 212-4] *** C/RTL co-simulation finished: FAIL ***
+command 'ap_source' returned error code
+    while executing
+"source /home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer/solution1/cosim.tcl"
+    invoked from within
+"hls::main /home/hacker/2D_convolution_with_linebuffer/proj_2D_convolution_with_linebuffer/solution1/cosim.tcl"
+    ("uplevel" body line 1)
+    invoked from within
+"uplevel 1 hls::main {*}$args"
+    (procedure "hls_proc" line 5)
+    invoked from within
+"hls_proc $argv"
